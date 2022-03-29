@@ -29,7 +29,7 @@ useEffect(()=>{
              <Route path='bd-address' element={<BDAddress />} />
              <Route path='usa-address' element={<USAAddress />} />
          </Route>
-         <Route path='/meals' element={<Meals meals={meals} />} />
+         <Route path='/meals' element={<Meals meals={meals} setMeals={setMeals} />} />
          <Route path='/meal/:mealId' element={<MealDetails />} />
          <Route path='/coins' element={<Coins />} />
          <Route path='/coin/:coinId' element={<CoinDetails />} />

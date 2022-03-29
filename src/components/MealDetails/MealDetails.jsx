@@ -16,8 +16,6 @@ const MealDetails = () => {
       });
   }, [mealId, setMealDetails]);
 
-  console.log(mealDetails);
-
   const {
     strMeal,
     strCategory,
