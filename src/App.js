@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import BDAddress from './components/About/BDAddress/BDAddress';
+import USAAddress from './components/About/USAAddress/USAAddress';
 import CoinDetails from './components/CoinDetails/CoinDetails';
 import Coins from './components/Coins/Coins';
 import Header from "./components/Header/Header";
@@ -23,7 +25,10 @@ useEffect(()=>{
      <Header />
      <Routes>
          <Route path="/" element={<Home meals={meals} />} />
-         <Route path='/about' element={<About />} />
+         <Route path='/about' element={<About />} >
+             <Route path='bd-address' element={<BDAddress />} />
+             <Route path='usa-address' element={<USAAddress />} />
+         </Route>
          <Route path='/meals' element={<Meals meals={meals} />} />
          <Route path='/meal/:mealId' element={<MealDetails />} />
          <Route path='/coins' element={<Coins />} />
